@@ -1,0 +1,24 @@
+# -- Server Port
+server: 
+  port: 9100
+  
+
+
+spring: 
+  application: 
+    name: chat-backend
+
+# -- DB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://15.164.129.107:3306/service?serverTimezone=UTC&characterEncoding=UTF-8
+    username: guney
+    password: "!sotusjf0"
+    
+  session:
+    jdbc:
+      initialize-schema: always
+
+# -- mapper 경로 설정      
+mybatis: 
+  mapper-locations: classpath:mapper/**/*.xml
